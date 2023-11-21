@@ -9,6 +9,7 @@ export const databaseProviders = [
         database: 'test.sql',
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
+        logging: ['query'],
       });
 
       return dataSource.initialize();
