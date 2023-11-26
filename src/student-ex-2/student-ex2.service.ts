@@ -16,4 +16,13 @@ export class StudentServiceEx2 {
   createOne(student) {
     return this.studentRepository.save(student);
   }
+
+  async updateOne(id, student) {
+    await this.studentRepository.update(id, student);
+    return this.studentRepository.findOne({ where: { id } });
+  }
+
+  async deleteOne(id) {
+    return this.studentRepository.delete(id);
+  }
 }

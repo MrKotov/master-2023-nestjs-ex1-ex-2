@@ -7,4 +7,7 @@ export class Student {
 
   @Column({ length: 500 })
   name: string;
+
+  @Column({ nullable: true })
+  age: number;
 }
