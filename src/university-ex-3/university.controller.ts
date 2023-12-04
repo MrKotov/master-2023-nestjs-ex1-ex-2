@@ -14,22 +14,22 @@ export class UniversityController {
   constructor(private readonly universityService: UniversityService) {}
 
   @Get()
-  getStudents() {
+  getUniversities() {
     return this.universityService.findAll();
   }
 
   @Post()
-  createStudent(@Body() university) {
+  createUniversity(@Body() university) {
     return this.universityService.createOne(university);
   }
 
   @Put(':id')
-  updateStudent(@Param('id') id, @Body() university) {
+  updateUniversity(@Param('id') id, @Body() university) {
     return this.universityService.updateOne(id, university);
   }
 
   @Delete(':id')
-  deleteStudent(@Param('id') id) {
+  deleteUniversity(@Param('id') id) {
     return this.universityService.deleteOne(id);
   }
 }
