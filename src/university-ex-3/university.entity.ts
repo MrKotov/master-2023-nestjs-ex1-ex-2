@@ -8,4 +8,7 @@ export class University {
 
   @Column({ length: 500 })
   name: string;
+
+  @OneToMany(() => Student, (students) => students.university)
+  students: Student[];
 }
